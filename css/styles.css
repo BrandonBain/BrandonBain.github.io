@@ -35,7 +35,7 @@ body {
 }
 
 #bio_section{
-    margin-top: 7vh;
+    margin-top: 4vh;
 }
 
 #social_links {
@@ -126,6 +126,9 @@ h1 {
 
 #name {
     font-size: 3.5rem; 
+    margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 0; /* Ensure no padding on the bottom */
+    line-height: 0; /* Adjust line-height if needed */
 }
 
 #title {
@@ -135,6 +138,9 @@ h1 {
     font-size: 2rem;   
 }
 
+#short_intro_container{
+    width: 75%;
+}
 #short_intro {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1.1rem;   
