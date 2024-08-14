@@ -70,6 +70,11 @@ body {
 
 a {
     text-decoration: none;
+    color: #ffffff;
+}
+
+footer{
+    background-color: #0e1629;
 }
 
 #split_container_1 {
