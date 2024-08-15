@@ -205,6 +205,13 @@ section{
     rgba(170, 170, 170, 0.4) 0px 1px 0px inset;
 }
 
+.experience_container:hover h4{
+    color: #6ACFC7;
+}
+.project_container:hover h4{
+    color: #6ACFC7;
+}
+
 /* CSS for fading effect on hover */
 .section_container:hover .container {
     opacity: 0.5; /* Reduce opacity of all containers */
