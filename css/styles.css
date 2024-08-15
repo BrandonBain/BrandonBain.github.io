@@ -334,7 +334,7 @@ footer{
 
 @media (max-width: 768px) {
     #main_container {
-        margin-top: 3em;
+        margin-top: 10em;
         flex-direction: column;
         width: 100%;
         height: auto; /* Allow the main container to grow with its content */
