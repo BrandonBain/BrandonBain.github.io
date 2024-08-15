@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 100vh;
-    width: 60%;
+    width: 62%;
     overflow-y: scroll;
     overflow: hidden;
 }
@@ -122,7 +122,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     font-family: "IBM Plex Sans", sans-serif;
     color: #cccccc;
@@ -138,6 +138,11 @@ p {
     margin-bottom: 20px;
     color: #cccccc;
 }
+.experience_container p,
+.project_container p {
+    font-size: 0.9em;
+}
+
 
 nav ul {
     list-style: none;
@@ -182,7 +187,7 @@ nav ul li.active a::before {
 }
 
 section{
-    margin-bottom: 5vh;
+    margin-bottom: 13vh;
 }
 .project_container{
     padding:0.5em;
@@ -211,6 +216,36 @@ section{
 .project_container:hover h4{
     color: #6ACFC7;
 }
+
+.experience_container:hover h5{
+    color: #ffffff;
+}
+.project_container:hover h5{
+    color: #ffffff;
+}
+
+h5{
+    color: #cccccc;
+}
+
+.ex_inner_container{
+    display: flex;
+}
+
+.pr_inner_container{
+    display: flex;
+
+}
+
+.ex_inner_container_date,
+.pr_inner_container_img{
+    width: 25%;
+}
+
+.ex_inner_container_bio{
+    width: 70%;
+}
+
 
 /* CSS for fading effect on hover */
 .section_container:hover .container {
