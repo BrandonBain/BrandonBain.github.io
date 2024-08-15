@@ -38,38 +38,6 @@ body {
     margin-top: 4vh;
 }
 
-#social_links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background-color: #1E1E1E;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-#social_links a {
-    display: inline-block;
-    padding: 10px 15px;
-    text-align: center;
-    font-size: 1em;
-    color: #FFFF;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#social_links a:hover {
-    background-color: #89CFF0;
-    color: #0A1F44;
-}
-
-#social_links img.social-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    padding: 0;
-    border: none;
-}
 
 a {
     text-decoration: none;
@@ -179,6 +147,9 @@ nav ul {
     margin-bottom: 20px;
 }
 
+
+
+
 nav ul li a {
     margin-bottom: 10px;
     cursor: pointer;
@@ -187,7 +158,32 @@ nav ul li a {
     text-decoration: none; 
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1.5rem;   
+    display: inline-block;
+    padding-left: 40px; /* Space between the line and the text */
+    transition: padding-left 0.3s ease-in-out; /* Smooth transition for text movement */
 }
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%; /* Keep the line horizontally centered relative to the text */
+    transform: translateY(-50%);
+    height: 2px; /* Height of the horizontal line */
+    width: 15px; /* New starting line length */
+    background-color: #ffffff;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li.active a {
+    padding-left: 55px; /* Adjusted to move the text further right when active */
+}
+
+nav ul li.active a::before {
+    width: 45px; /* Extended line length */
+}
+
+
 
 .section_header_container {
     background-color: #0e1629;
@@ -271,15 +267,19 @@ footer{
 
 #social_links {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
     margin-top: 20px;
     padding: 10px 20px;
-    background: linear-gradient(to right, rgba(30, 30, 30, 0.2) 0%, rgba(30, 30, 30, 0.2) 80%, rgba(30, 30, 30, 0.8) 100%);
     border-radius: 50px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
     transition: all 0.3s ease;
-    width: fit-content;
+    width: 100%; 
+}
+
+#social_links:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+    background: linear-gradient(to right, rgba(30, 30, 30, 0.2) 0%, rgba(30, 30, 30, 0.2) 80%, rgba(30, 30, 30, 0.8) 100%);
+
 }
 
 #social_links a {
@@ -292,6 +292,7 @@ footer{
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 #social_links a:hover {
     background-color: #0A1F44;

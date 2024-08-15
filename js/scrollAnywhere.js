@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Variables to manage smooth scrolling
         let scrollTimeout;
-        let scrollDistance = 200; // Adjust this value for longer or shorter scrolls
+        let scrollDistance = 150; // Adjust this value for longer or shorter scrolls
 
         // Redirect any scroll on the body to split_container_2
         document.body.addEventListener('wheel', function(event) {
