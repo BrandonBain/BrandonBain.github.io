@@ -27,45 +27,87 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     color: #ffffff;
     text-align: left;
 }
 
 .back-link {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem; /* Adjust the font size as needed */
     color: #89CFF0;
     text-decoration: none;
-    font-size: 1rem;
-    display: block;
     margin-bottom: 20px;
-    text-align: left;
+}
+
+.back-link img {
+    width: 20px; /* Set the width of the back arrow */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 10px; /* Space between the arrow and text */
 }
 
 .back-link:hover {
     text-decoration: underline;
 }
 
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    table-layout: fixed; /* Fixes the layout to ensure consistent column widths */
+    margin-bottom: 4em;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 15px; /* Consistent padding for alignment */
+    border-bottom: 1px solid #6ACFC7;
+}
+
+th {
+    font-size: 1rem;
+    color: #89CFF0;
+    border-bottom: 2px solid #6ACFC7;
+    text-align: left; /* Ensures header text aligns to the left */
+}
+
+td {
+    font-size: 1rem;
+    color: #cccccc;
     text-align: left;
 }
 
-thead th {
-    font-size: 1rem;
-    padding-bottom: 15px;
-    color: #6ACFC7;
-    border-bottom: 2px solid #6ACFC7;
+/* Specific column width adjustments */
+th:nth-child(1), td:nth-child(1) { /* Year */
+    width: 10%; /* Fixed width for year */
 }
 
-tbody tr {
-    border-bottom: 1px solid #6ACFC7;
+th:nth-child(2), td:nth-child(2) { /* Certification/Project */
+    width: 40%; /* Fixed width for certification/project */
+}
+
+th:nth-child(3), td:nth-child(3) { /* Status/Made at */
+    width: 20%; /* Adjusted width for status/institution */
+}
+
+th:nth-child(4), td:nth-child(4) { /* Link */
+    width: 20%; /* Reduced width for link */
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #1f2a44;
     transition: background-color 0.3s ease;
 }
 
-tbody tr:hover {
-    background-color: #0e1c2b;
+/* Remove underline from links and set color */
+td a {
+    color: #89CFF0;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
 }
 
 td {
