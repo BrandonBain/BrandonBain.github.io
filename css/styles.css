@@ -252,9 +252,34 @@ section{
     border: 3px solid #cccccc;
 }
 
-footer{
-    margin-top: 5em;
+footer {
+    background-color: #0e1629;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 2px solid #6ACFC7;
+    margin-top: 40px;
 }
+
+footer a {
+    color: #89CFF0;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-content p {
+    margin: 5px 0;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
 
 #social_links {
     display: flex;
