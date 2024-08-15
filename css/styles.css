@@ -93,7 +93,7 @@ h1 {
 }
 
 #name {
-    font-size: 3.5rem; 
+    font-size: 3rem; 
     margin-bottom: 0; /* Remove bottom margin */
     padding-bottom: 0; /* Ensure no padding on the bottom */
     line-height: 0; /* Adjust line-height if needed */
@@ -313,6 +313,24 @@ footer{
     background-color: #89CFF0;
     color: #0A1F44;
 }
+
+@media (max-width: 1260px) {
+    body {
+        width: 100%;
+    }
+
+    #main_container{
+        width: 100%;
+    }
+
+    #name {
+        font-size: 3rem; 
+        margin-bottom: 0; /* Remove bottom margin */
+        padding-bottom: 0; /* Ensure no padding on the bottom */
+        line-height: 0; /* Adjust line-height if needed */
+    }
+}
+
 
 @media (max-width: 768px) {
     #main_container {
