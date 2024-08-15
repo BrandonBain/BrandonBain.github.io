@@ -262,23 +262,26 @@ footer {
     margin-top: 40px;
 }
 
-footer a {
-    color: #89CFF0;
-    text-decoration: none;
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: #ffffff; /* Change link color to white */
+    text-decoration: none; /* Remove underline */
     margin: 0 5px;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer .footer-content p {
-    margin: 5px 0;
+.footer-link:hover {
+    color: #89CFF0; /* Optional: Change color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 footer strong {
     color: #ffffff;
 }
+
+
 
 
 #social_links {
@@ -359,7 +362,7 @@ footer strong {
 
 @media (max-width: 768px) {
     #main_container {
-        margin-top: 4em;
+        margin-top: 2em;
         flex-direction: column;
         width: 100%;
         height: auto; /* Allow the main container to grow with its content */
