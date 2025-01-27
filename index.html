@@ -1,161 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Brandon Bain - Cybersecurity & IT Professional</title>
-        <meta name="description" content="Brandon Bain's professional portfolio showcasing experience in cybersecurity, IT, and software development. Explore projects, skills, and contact information.">   
-        <link rel="stylesheet" href="/css/styles.css"> 
-    </head>
-    <body>
-        <div id="main_container">
-            <div class="split_container" id="split_container_1">
-                <div id="title_container">
-                        <h1 id="name">Brandon Bain</h1>
-                        <h2 id="title">Cybersecurity & IT Professional</h2>
-                    <div id="short_intro_container">
-                        <p id="short_intro"> I'm passionate about using my skills to improve organizational security and efficiency.</p>
-                    </div>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Bain - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hide scrollbar for the right section */
+    #split_container_2::-webkit-scrollbar {
+      width: 0;
+    }
+    #split_container_2 {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <div id="main_container" class="flex flex-col md:flex-row justify-between mx-auto h-screen w-10/12 md:w-9/12">
+    <!-- Left Section -->
+    <div id="split_container_1" class="w-full md:w-1/2 sticky top-0 p-5 bg-gray-800 flex flex-col justify-between">
+      <div>
+        <h1 class="text-5xl font-extrabold">Brandon Bain</h1>
+        <h2 class="text-2xl font-medium text-gray-400 mt-3">Cybersecurity & IT Professional</h2>
+        <p class="text-lg text-gray-300 mt-5">I'm passionate about using my skills to improve organizational security and efficiency.</p>
+        <nav class="mt-8">
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-lg hover:text-blue-400">About</a></li>
+            <li><a href="#experience" class="text-lg hover:text-blue-400">Experience</a></li>
+            <li><a href="#projects" class="text-lg hover:text-blue-400">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <img src="assets/BrandonPhoto.png" alt="Brandon Bain" class="w-28 h-28 rounded-full border-4 border-gray-600">
+      </div>
+      <div id="social_links" class="mt-8 flex space-x-5 justify-center">
+        <a href="https://linkedin.com/in/Brandon-bain/" target="_blank" class="hover:text-blue-400">LinkedIn</a>
+        <a href="https://github.com/BrandonBain" target="_blank" class="hover:text-blue-400">GitHub</a>
+        <a href="assets/BrandonB_Resume_2024.pdf" target="_blank" class="hover:text-blue-400">Résumé</a>
+        <a href="mailto:brandondbain@gmail.com" class="hover:text-blue-400">Email</a>
+      </div>
+    </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="#bio_section">About</a></li>
-                        <li><a href="#experience_section">Experience</a></li>
-                        <li><a href="#projects_section">Projects</a></li>
-                    </ul>
-                </nav> 
+    <!-- Right Section -->
+    <div id="split_container_2" class="w-full md:w-1/2 overflow-y-scroll p-8 space-y-16">
+      <!-- About Section -->
+      <section id="about" class="mb-16">
+        <h3 class="text-3xl font-bold mb-6">About</h3>
+        <p class="text-gray-400 leading-relaxed">
+          Brandon Bain is a cybersecurity and IT professional with experience in risk management, data privacy, and systems engineering. Currently pursuing a B.S. in Computing and Information Technologies at RIT.
+        </p>
+      </section>
 
-                <div id="image_container">
-                    <img src="/assets/images/BrandonPhoto.png" alt="Brandon Bain Photo" id="profile_photo">
-                </div>
-
-                <div class="buttons" id="social_links">
-                    <a href="https://linkedin.com/in/Brandon-bain/" target="_blank">
-                        <img src="/assets/images/icons8-linkedin.svg" alt="linkedin" class="social-icon">
-                    </a>
-                    <a href="https://github.com/BrandonBain" target="_blank">
-                        <img src="/assets/images/icons8-github.svg" alt="GitHub" class="social-icon">
-                    </a>
-                    <a href="/assets/docs/BrandonB_Resume_2024.pdf" target="_blank">Résumé</a>
-                    <a href="mailto:brandondbain@gmail.com">
-                        <img src="/assets/images/icons8-mail.svg" alt="Mail" class="social-icon">
-                    </a>
-                </div>
-            </div>
-
-            <div class="split_container" id="split_container_2">
-                <section id="bio_section">
-                    <div class="section_header_container" id="sec_header_container_1">
-                        <h3>About</h3>
-                    </div>
-                    <div class="bio_container">
-                        <p>Brandon Bain is a cybersecurity and IT professional with experience in risk management, data privacy, and systems engineering. Currently pursuing a B.S. in Computing and Information Technologies at RIT.
-                            Brandon Bain is a cybersecurity and IT professional with experience in risk management, data privacy, and systems engineering. Currently pursuing a B.S. in Computing and Information Technologies at RIT.
-                            Brandon Bain is a cybersecurity and IT professional with experience in risk management, data privacy, and systems engineering. Currently pursuing a B.S. in Computing and Information Technologies at RIT.
-                            Brandon Bain is a cybersecurity and IT professional with experience in risk management, data privacy, and systems engineering. Currently pursuing a B.S. in Computing and Information Technologies at RIT.
-                        </p>
-                    </div>
-                </section>
-                <section id="experience_section">
-                    <div class="section_header_container" id="sec_header_container_2">
-                        <h3>Experience</h3>
-                    </div>
-                    <div class="experience_container" id="experience_container_1">
-                        <a href="https://www.ukg.com/" target="ukg link" style="text-decoration: none; color: inherit;">
-                            <div class="ex_inner_container">
-                                <div class="ex_inner_container_date">
-                                    <h5>Jan 24 - April 24</h5>
-                                </div>
-                                <div class="ex_inner_container_bio">
-                                    <h4>Enterprise Risk Intern - UKG</h4>
-                                    <p>Conducted the coordination and execution of GRC and ERM initiatives, leading ISO and SOC audit preparations.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="experience_container" id="experience_container_2">
-                        <a href="https://www.labster.com/" target="labster link" style="text-decoration: none; color: inherit;">
-                            <div class="ex_inner_container">
-                                <div class="ex_inner_container_date">
-                                    <h5>Jan 24 - April 24</h5>
-                                </div>
-                                <div class="ex_inner_container_bio">
-                                    <h4>Cybersecurity & IT Intern - Labster</h4>
-                                    <p>Developed and implemented Labster's global privacy compliance program and security framework.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="experience_container" id="experience_container_3">
-                        <a href="https://www.ll.mit.edu/" target="mit ll link" style="text-decoration: none; color: inherit;">
-                            <div class="ex_inner_container">
-                                <div class="ex_inner_container_date">
-                                    <h5>Jan 24 - April 24</h5>
-                                </div>
-                                <div class="ex_inner_container_bio">
-                                    <h4>Co-op Assistant - MIT Lincoln Laboratory</h4>
-                                    <p>Collaborated to develop and uphold systems through comprehensive analysis, engineering, manufacturing, and testing.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div  id="experience_container_last">
-                        <a href="/assets/docs/BrandonB_Resume_2024.pdf" target="_blank">See full Résumé<a href="/projects/php-database-modular-site.html"><img src="/assets/images/icons8-arrow-upper-right-48.png" alt="Upper right arrow" style="width:16px; height:16px; vertical-align:middle; margin-right:5px;"></a>
-                    </div>
-                </section>
-
-                <section id="projects_section">
-                    <section id="projects_section">
-                        <div class="section_header_container" id="sec_header_container_3">
-                            <h3>Projects</h3>
-                        </div>
-                    
-                        <a href="https://www.credly.com/badges/bf94f333-0d93-41ac-aa21-9fa50539b76e/linked_in_profile" target="_blank" style="text-decoration: none; color: inherit;">
-                            <div class="pr_inner_container">
-                                <!-- <div class="pr_inner_container_img">
-                                    <img src="/assets/images/certified-in-cybersecurity-cc.png"></a>
-                                </div> -->
-                                <div class="project_container" id="project_container_1">
-                                    <h4>Certified in Cybersecurity (CC)</h4>
-                                    <p>This certification demonstrates a foundational knowledge of cybersecurity principles, preparing professionals for further growth in the field.</p>
-                                </div>
-                            </div>
-                        </a>
-                    
-                        <a href="https://www.example.com/police-resource-deployment-project" target="_blank" style="text-decoration: none; color: inherit;">
-                            <div class="project_container" id="project_container_2">
-                                <h4>Optimizing Police Resource Deployment Using Data Mining</h4>
-                                <p>Data mining project analyzing crime data to recommend strategic police deployments.</p>
-                            </div>
-                        </a>
-                    
-                        <a href="https://www.example.com/php-database-modular-site" target="_blank" style="text-decoration: none; color: inherit;">
-                            <div class="project_container" id="project_container_3">
-                                <h4>PHP & Database Modular Site</h4>
-                                <p>Interactive guide for Lake Winnipesaukee using advanced web development techniques.</p>
-                            </div>
-                        </a>
-                    
-                        <div id="project_container_last">
-                            <a href="projects.html" class="footer-link">See more certifications & projects <img src="/assets/images/icons8-arrow-upper-right-48.png" alt="Upper right arrow" style="width:16px; height:16px; vertical-align:middle; margin-right:5px;"></a>
-                        </div>
-                    </section>
-                    
-                </section>
-                <footer>
-                    <div class="footer-content">
-                        <p>This website was designed in <strong><a href="https://www.figma.com" target="_blank" class="footer-link">Figma</a></strong>, 
-                            coded in <strong><a href="https://code.visualstudio.com/" target="_blank" class="footer-link">Visual Studio Code</a></strong>, 
-                            and is hosted on <strong><a href="https://pages.github.com/" target="_blank" class="footer-link">GitHub Pages</a></strong>.</p>
-                        <p>- Brandon Bain -</p>
-                    </div>
-                </footer>                          
-            </div>
+      <!-- Experience Section -->
+      <section id="experience" class="mb-16">
+        <h3 class="text-3xl font-bold mb-6">Experience</h3>
+        <div class="space-y-12">
+          <div>
+            <h4 class="text-xl font-bold mb-2">Enterprise Risk Intern - UKG</h4>
+            <p class="text-gray-400 leading-relaxed">Conducted the coordination and execution of GRC and ERM initiatives, leading ISO and SOC audit preparations.</p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-2">Cybersecurity & IT Intern - Labster</h4>
+            <p class="text-gray-400 leading-relaxed">Developed and implemented Labster's global privacy compliance program and security framework.</p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-2">Co-op Assistant - MIT Lincoln Laboratory</h4>
+            <p class="text-gray-400 leading-relaxed">Collaborated to develop and uphold systems through comprehensive analysis, engineering, manufacturing, and testing.</p>
+          </div>
         </div>
-        <script src="/js/scrollAnywhere.js"></script>
-        <script src="/js/navHighlight.js"></script>
-    </body>
-</html>
+      </section>
 
+      <!-- Projects Section -->
+      <section id="projects" class="mb-16">
+        <h3 class="text-3xl font-bold mb-6">Projects</h3>
+        <div class="space-y-12">
+          <div>
+            <h4 class="text-xl font-bold mb-2">Certified in Cybersecurity (CC)</h4>
+            <p class="text-gray-400 leading-relaxed">
+              This certification demonstrates a foundational knowledge of cybersecurity principles, preparing professionals for further growth in the field.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-2">Optimizing Police Resource Deployment Using Data Mining</h4>
+            <p class="text-gray-400 leading-relaxed">
+              Data mining project analyzing crime data to recommend strategic police deployments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-center py-8">
+        <p class="text-gray-400">
+          Designed in <a href="https://www.figma.com" class="text-blue-400 hover:underline">Figma</a>, coded in <a href="https://code.visualstudio.com" class="text-blue-400 hover:underline">VS Code</a>, and hosted on <a href="https://pages.github.com" class="text-blue-400 hover:underline">GitHub Pages</a>.
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
