@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Bain - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleDropdown(id) {
+      document.querySelectorAll('.dropdown-content').forEach(content => {
+        if (content.id !== id) {
+          content.classList.add('hidden');
+        }
+      });
+      document.getElementById(id).classList.toggle('hidden');
+    }
+  </script>
+  <style>
+    body { 
+      scroll-behavior: smooth; 
+      background-color: #F5F5F7; 
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(15px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    .glass-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      flex-shrink: 0;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    .content-wrapper {
+      padding-left: 70px;
+      width: 100%;
+    }
+    .section-header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .table-wrapper {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+    }
+    .table-container {
+      flex: 1;
+      min-width: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 14px;
+      text-align: left;
+    }
+    th {
+      background: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      color: #333;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #444;
+    }
+    td a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="text-black min-h-screen px-4 md:px-10 lg:px-16 xl:px-20">
+  <div class="max-w-7xl mx-auto py-10">
+    <header class="text-center mb-12">
+      <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-black">Brandon Bain</h1>
+      <p class="text-lg md:text-xl text-gray-700 mt-3">Cybersecurity & IT Professional</p>
+    </header>
+    
+    <section id="experience" class="mt-10">
+      <h2 class="text-3xl font-semibold text-gray-900">Work Experience</h2>
+      <div class="mt-6 space-y-4">
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-ukg')">
+          <a href="https://www.ukg.com" target="_blank"><img src="/assets/images/ukgp.png" alt="UKG Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Enterprise Risk Intern - <a href="https://www.ukg.com" target="_blank" class="text-black hover:underline">UKG</a></h3>
+            <p class="text-gray-700 text-sm">Apr 2023 - May 2024</p>
+            <div id="exp-ukg" class="dropdown-content hidden text-gray-600">
+              Led efforts in governance, risk, and compliance (GRC) by conducting risk assessments and supporting enterprise-wide audit readiness. Collaborated with security and compliance teams to enhance risk management frameworks and improve resiliency planning for system outages.
+            </div>
+          </div>
+        </div>
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-labster')">
+          <a href="https://www.labster.com" target="_blank"><img src="/assets/images/labster.png" alt="Labster Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Cybersecurity & IT Intern - <a href="https://www.labster.com" target="_blank" class="text-black hover:underline">Labster</a></h3>
+            <p class="text-gray-700 text-sm">Dec 2022 - Apr 2023</p>
+            <div id="exp-labster" class="dropdown-content hidden text-gray-600">
+              Developed a comprehensive security compliance program aligning with industry regulations (FedRAMP, GDPR, HIPAA, NIST). Conducted IT access audits and vulnerability scans, securing critical systems and maintaining strong security postures for Labster’s production environment.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-MIT')">
+          <a href="https://www.ll.mit.edu/" target="_blank"><img src="/assets/images/MITLL.jpg" alt="MIT LL Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Co-op Assistant - <a href="https://www.ll.mit.edu/" target="_blank" class="text-black hover:underline">MIT Lincoln Labs</a></h3>
+            <p class="text-gray-700 text-sm">Dec 2022 - Apr 2023</p>
+            <div id="exp-MIT" class="dropdown-content hidden text-gray-600">
+              Developed a comprehensive security compliance program aligning with industry regulations (FedRAMP, GDPR, HIPAA, NIST). Conducted IT access audits and vulnerability scans, securing critical systems and maintaining strong security postures for Labster’s production environment.
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="certifications-projects" class="mt-12">
+      <div class="table-wrapper">
+        <div class="table-container">
+          <h2 class="section-header text-3xl font-semibold text-gray-900">Certifications</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Certification</th>
+                <th>Status</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-700">
+                <td class="py-3 px-4">N/A</td>
+                <td class="py-3 px-4">CISM</td>
+                <td class="py-3 px-4">Future Goal</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.isaca.org/credentialing/cism?utm_source=google&utm_medium=cpc&utm_campaign=cism-evergreen&utm_term=cert_cism_na_conv_google_cpc_branded_ext&utm_content=null_null&gad_source=1&gclid=CjwKCAiAk8G9BhA0EiwAOQxmfseOUxG9eHRx4ujWahBiODeLWrCRFgdasVWsp-W4dsJR1K00NGVqWxoCkmgQAvD_BwE#1" class="text-blue-400 hover:underline flex items-center">
+                         Info <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+                    </a>
+                </td>
+            </tr>
+              <tr class="border-b border-gray-700">
+                <td class="py-3 px-4">N/A</td>
+                <td class="py-3 px-4">CISSP</td>
+                <td class="py-3 px-4">Future Goal</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.isc2.org/certifications/cissp" class="text-blue-400 hover:underline flex items-center">
+                         Info <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+                    </a>
+                </td>
+            </tr>
+            <tr class="border-b border-gray-700">
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">Google Cybersecurity Professional Certificate</td>
+                <td class="py-3 px-4">Completed</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.credly.com/badges/d04b5d9e-a206-4293-b5f0-26c1b59e423b" class="text-blue-400 hover:underline flex items-center">
+                         Info <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">ISC2 Certified in Cybersecurity (CC)</td>
+                <td class="py-3 px-4">Completed</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.credly.com/badges/bf94f333-0d93-41ac-aa21-9fa50539b76e/linked_in_profile" class="text-blue-400 hover:underline flex items-center">
+                         Info <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-container">
+          <h2 class="section-header text-3xl font-semibold text-gray-900">Projects</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Project</th>
+                <th>Built with</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-700">
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">Optimizing Police Resource Deployment Using Data Mining</td>
+                <td class="py-3 px-4">Python, Data Mining</td>
+                <td class="py-3 px-4">
+                    <button onclick="showModal('Optimizing Police Resource Deployment', 'This project analyzes crime data using Python and data mining techniques to recommend strategic police deployments.')" class="text-blue-400 hover:underline">
+                        View Details
+                    </button>
+                </td>
+            </tr>
+            <tr class="border-b border-gray-700">
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">Application Performance Monitoring</td>
+                <td class="py-3 px-4">Bash, C</td>
+                <td class="py-3 px-4">
+                    <button onclick="showModal('Application Performance Monitoring', 'A project focused on monitoring application performance using Bash scripts and C programming for optimization.')" class="text-blue-400 hover:underline">
+                        View Details
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">PHP & Database Modular Site</td>
+                <td class="py-3 px-4">PHP, MySQL, HTML, CSS</td>
+                <td class="py-3 px-4">
+                    <button onclick="showModal('PHP & Database Modular Site', 'Developed a modular PHP-based site with database connectivity using MySQL.')" class="text-blue-400 hover:underline">
+                        View Details
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="mt-8">
+      <h2 class="text-3xl text-3xl font-semibold text-gray-900">Achievements</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dean's List Recognition -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">Dean’s List Recognition</h3>
+          <p class="text-gray-700 text-sm">Spring 2021, Spring 2023, Fall 2023, Fall 2024</p>
+          <p class="text-gray-600">Consistently recognized for **academic excellence**, maintaining a high GPA while balancing coursework, internships, and cybersecurity research.</p>
+        </div>
+
+        <!-- 2019 - SkillsUSA Silver Medal -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">SkillsUSA Regional Silver Medalist</h3>
+          <p class="text-gray-700 text-sm">May 2019</p>
+          <p class="text-gray-600">Secured **Silver Medal** in **Additive Manufacturing** at SkillsUSA, demonstrating advanced proficiency in 3D printing, CAD modeling, and technical problem-solving.</p>
+          <a href="https://www.watertownmanews.com/2018/03/15/minuteman-high-school-students-win-medals-at-skillsusa-competition/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+            Read Article <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+          </a>
+        </div>
+    
+        <!-- 2018 - SkillsUSA Gold Medal -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">SkillsUSA Regional Gold Medalist</h3>
+          <p class="text-gray-700 text-sm">April 2018</p>
+          <p class="text-gray-600">Achieved **Gold Medal** in **Additive Manufacturing** at the SkillsUSA competition, showcasing expertise in 3D printing techniques and precision engineering.</p>
+        </div>
+    
+        <!-- 2018 - The Beacon Feature -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">Featured in The Beacon for Modern Manufacturing</h3>
+          <p class="text-gray-700 text-sm">November 2018</p>
+          <p class="text-gray-600">Interviewed mechanical engineer Rachael Ramos at Associated Environmental Systems in Acton, discussing innovations in modern manufacturing.</p>
+          <a href="https://www.wickedlocal.com/story/the-beacon/2018/11/16/minuteman-students-get-first-hand/64757097007/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+            Read Article <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+          </a>
+        </div>
+    
+
+
+    
+      </div>
+    </section>
+    
+    
+    
+  </div>
+</body>
+</html>
