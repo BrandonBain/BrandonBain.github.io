@@ -45,7 +45,9 @@
       position: absolute;
       top: 20px;
       left: 20px;
+      border-radius: 6px; 
     }
+
     .content-wrapper {
       padding-left: 70px;
       width: 100%;
@@ -235,6 +237,40 @@
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td class="py-3 px-4">2025</td>
+                <td class="py-3 px-4">Senior Capstone</td>
+                <td class="py-3 px-4">Tailwind, Laravel, AWS Lightsail</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('')" class="text-blue-400 hover:underline">
+                    View Details
+                </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">NSSA 322 - Kubernetes Pipeline & Observability</td>
+                <td class="py-3 px-4">Kubernetes, Minikube</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('NSSA 322 - Kubernetes Pipeline & Observability', 
+                  'This project focused on Kubernetes fundamentals using Minikube. The lab covered deploying and managing containerized applications, implementing CI/CD pipelines, and configuring observability tools like monitoring and logging. Key topics included Kubernetes deployments, services, scaling, and resilience strategies.')" 
+                  class="text-blue-400 hover:underline">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">Release Engineering & Web Updates</td>
+                <td class="py-3 px-4">Ansible, Bash, HAProxy, Azure</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('Release Engineering & Web Updates', 
+                  'This project focused on implementing a blue/green deployment strategy for a load-balanced web application. Our team used Ansible and Bash scripts to automate rolling deployments and ensure zero downtime. Deliverables included a Visio architecture diagram and an automated release engineering process.')" 
+                  class="text-blue-400 hover:underline">
+                    View Details
+                  </button>
+                </td>
+              </tr>
               <tr>
                 <td class="py-3 px-4">2023</td>
                 <td class="py-3 px-4">Optimizing Police Resource Deployment Using Data Mining</td>
