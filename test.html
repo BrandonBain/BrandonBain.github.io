@@ -15,6 +15,7 @@
       document.getElementById(id).classList.toggle('hidden');
     }
   </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next&display=swap">
   <style>
     body { 
       scroll-behavior: smooth; 
@@ -96,14 +97,38 @@
     td a:hover {
       text-decoration: underline;
     }
+
+    .atkinson-hyperlegible-next {
+    font-family: "Atkinson Hyperlegible Next", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Adjust weight as needed */
+    font-style: normal;
+  }
+
+  @keyframes bounceDots {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-4px); }
+        }
+        .dots span {
+            display: inline-block;
+            animation: bounceDots 1.5s infinite;
+        }
+        .dots span:nth-child(2) { animation-delay: 0.2s; }
+        .dots span:nth-child(3) { animation-delay: 0.4s; }
+
   </style>
 </head>
 <body class="text-black min-h-screen px-4 md:px-10 lg:px-16 xl:px-20">
   <div class="max-w-7xl mx-auto py-10">
     <header class="text-center mb-12">
-      <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-black">Brandon Bain</h1>
-      <p class="text-lg md:text-xl text-gray-700 mt-3">Cybersecurity & IT Professional</p>
+      <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-black atkinson-hyperlegible-next">
+        Brandon Bain
+      </h1>
+      <div class="text-lg md:text-xl text-gray-700 mt-3 dots">
+        Cybersecurity & IT Professional<span>.</span><span>.</span><span>.</span>
+    </div>
     </header>
+    
     
     <section id="experience" class="mt-10">
       <h2 class="text-3xl font-semibold text-gray-900">Work Experience</h2>
@@ -133,9 +158,9 @@
           <a href="https://www.ll.mit.edu/" target="_blank"><img src="/assets/images/MITLL.jpg" alt="MIT LL Logo" class="company-logo"></a>
           <div class="content-wrapper">
             <h3 class="text-xl font-bold">Co-op Assistant - <a href="https://www.ll.mit.edu/" target="_blank" class="text-black hover:underline">MIT Lincoln Labs</a></h3>
-            <p class="text-gray-700 text-sm">Dec 2022 - Apr 2023</p>
+            <p class="text-gray-700 text-sm">Dec 2019 - June 2020</p>
             <div id="exp-MIT" class="dropdown-content hidden text-gray-600">
-              Developed a comprehensive security compliance program aligning with industry regulations (FedRAMP, GDPR, HIPAA, NIST). Conducted IT access audits and vulnerability scans, securing critical systems and maintaining strong security postures for Labster’s production environment.
+              Collaborated across the organization to successfully develop and uphold systems through comprehensive analysis, engineering, manufacturing, calibrating, and testing.
             </div>
           </div>
       </div>
