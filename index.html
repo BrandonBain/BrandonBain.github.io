@@ -120,6 +120,38 @@
       text-decoration: underline;
     }
 
+    .photo-gallery {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .photo-gallery h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
     .atkinson-hyperlegible-next {
     font-family: "Atkinson Hyperlegible Next", serif;
     font-optical-sizing: auto;
@@ -368,6 +400,39 @@
           <a href="https://www.wickedlocal.com/story/the-beacon/2018/11/16/minuteman-students-get-first-hand/64757097007/" target="_blank" class="text-blue-500 hover:underline flex items-center">
             Read Article <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-gallery">
+      <h2>Get to know me!</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_breck.gif" alt="Trip Animation">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_mtFiju.jpg" alt="Trip 4">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_deer.jpg" alt="Trip 1">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_owl.jpg" alt="Trip 2">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_tower.jpg" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_kyoto.jpg" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_cats.png" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_osaka.jpg" alt="Trip 4">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_catneck.png" alt="Trip 4">
         </div>
       </div>
     </section>
