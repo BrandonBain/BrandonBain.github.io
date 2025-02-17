@@ -6,23 +6,24 @@
   <title>Brandon Bain - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    function toggleDropdown(id) {
-      document.querySelectorAll('.dropdown-content').forEach(content => {
-        if (content.id !== id) {
-          content.classList.add('hidden');
-          content.style.maxHeight = null;
-        }
-      });
-      
-      const content = document.getElementById(id);
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        content.style.maxHeight = content.scrollHeight + "px";
-      } else {
+  function toggleDropdown(id) {
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+      if (content.id !== id) {
         content.style.maxHeight = null;
         setTimeout(() => content.classList.add('hidden'), 300);
       }
+    });
+
+    const content = document.getElementById(id);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+      setTimeout(() => content.classList.add('hidden'), 300);
     }
+  }
+
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next&display=swap">
   <style>
