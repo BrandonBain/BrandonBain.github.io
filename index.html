@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Brandon Bain - Cybersecurity & IT Professional</title>
-        <meta name="description" content="Brandon Bain's professional portfolio showcasing experience in cybersecurity, IT, and software development. Explore projects, skills, and contact information.">   
-        <link rel="stylesheet" href="/css/styles.css"> 
-    </head>
-    <body>
-        <div id="main_container">
-            <div class="split_container" id="split_container_1">
-                <div id="title_container">
-                        <h1 id="name">Brandon Bain</h1>
-                        <h2 id="title">Cybersecurity & IT Professional</h2>
-                    <div id="short_intro_container">
-                        <p id="short_intro"> I'm passionate about using my skills to improve organizational security and efficiency.</p>
-                    </div>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Bain - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  function toggleDropdown(id) {
+    document.querySelectorAll('.dropdown-content').forEach(content => {
+      if (content.id !== id) {
+        content.style.maxHeight = null;
+        setTimeout(() => content.classList.add('hidden'), 300);
+      }
+    });
 
-                <nav>
-                    <ul>
-                        <li><a href="#bio_section">About</a></li>
-                        <li><a href="#experience_section">Experience</a></li>
-                        <li><a href="#projects_section">Projects</a></li>
-                    </ul>
-                </nav> 
+    const content = document.getElementById(id);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+      setTimeout(() => content.classList.add('hidden'), 300);
+    }
+  }
 
-                <div id="image_container">
-                    <img src="/assets/images/BrandonPhoto.png" alt="Brandon Bain Photo" id="profile_photo">
-                </div>
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next&display=swap">
+  <style>
+    body { 
+      scroll-behavior: smooth; 
+      background: url('https://www.toptal.com/designers/subtlepatterns/uploads/nice_snow.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(15px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    .glass-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      flex-shrink: 0;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border-radius: 6px; 
+    }
 
+<<<<<<< HEAD
                 <div class="buttons" id="social_links">
                     <a href="https://linkedin.com/in/Brandon-bain/" target="_blank">
                         <img src="/assets/images/icons8-linkedin.svg" alt="linkedin" class="social-icon">
@@ -165,9 +204,412 @@
                         <p>- Brandon Bain -</p>
                     </div>
                 </footer>                          
+=======
+    .content-wrapper {
+      padding-left: 70px;
+      width: 100%;
+    }
+    .section-header {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .table-wrapper {
+      display: flex;
+      gap: 15px;
+      justify-content: space-between;
+    }
+    .table-container {
+      flex: 1;
+      min-width: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 14px;
+      text-align: left;
+    }
+    th {
+      background: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      color: #333;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #444;
+    }
+    td a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    .photo-gallery {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .photo-gallery h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .atkinson-hyperlegible-next {
+    font-family: "Atkinson Hyperlegible Next", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Adjust weight as needed */
+    font-style: normal;
+  }
+
+  .dropdown-content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+  @keyframes bounceDots {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-4px); }
+        }
+        .dots span {
+            display: inline-block;
+            animation: bounceDots 1.5s infinite;
+        }
+        .dots span:nth-child(2) { animation-delay: 0.2s; }
+        .dots span:nth-child(3) { animation-delay: 0.4s; }
+
+  </style>
+</head>
+<body class="text-black min-h-screen px-4 md:px-10 lg:px-16 xl:px-20">
+  <div class="max-w-7xl mx-auto py-10">
+    <header class="text-center mb-12">
+      <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight text-black atkinson-hyperlegible-next">
+        Brandon Bain
+      </h1>
+      <div class="text-lg md:text-xl text-gray-700 mt-3 dots">
+        Cybersecurity & IT Professional<span>.</span><span>.</span><span>.</span>
+    </div>
+    </header>
+     
+    <section id="experience" class="mt-10">
+      <h2 class="text-3xl font-semibold text-gray-900">Work Experience</h2>
+      <div class="mt-6 space-y-4">
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-ukg')">
+          <a href="https://www.ukg.com" target="_blank" rel="noopener noreferrer"><img src="/assets/images/ukgp.png" alt="UKG Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Enterprise Risk Intern - <a href="https://www.ukg.com" target="_blank" class="text-black hover:underline">UKG</a></h3>
+            <p class="text-gray-700 text-sm">Apr 2023 - May 2024</p>
+            <div id="exp-ukg" class="dropdown-content hidden mt-2 text-gray-600">
+              Led efforts in governance, risk, and compliance (GRC) by conducting risk assessments and supporting enterprise-wide audit readiness. Collaborated with security and compliance teams to enhance risk management frameworks and improve resiliency planning for system outages.
+>>>>>>> 055927bc65a631c5eac68f3d72542892676e908d
             </div>
+          </div>
         </div>
+        
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-labster')">
+          <a href="https://www.labster.com" target="_blank" rel="noopener noreferrer"><img src="/assets/images/labster.png" alt="Labster Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Cybersecurity & IT Intern - <a href="https://www.labster.com" target="_blank" class="text-black hover:underline">Labster</a></h3>
+            <p class="text-gray-700 text-sm">Dec 2022 - Apr 2023</p>
+            <div id="exp-labster" class="dropdown-content hidden mt-2 text-gray-600">
+              Developed a comprehensive security compliance program aligning with industry regulations (FedRAMP, GDPR, HIPAA, NIST). Conducted IT access audits and vulnerability scans, securing critical systems and maintaining strong security postures for Labster’s production environment.
+            </div>
+          </div>
+        </div>
+<<<<<<< HEAD
         <script src="/js/scrollAnywhere.js"></script>
         <script src="/js/navHighlight.js"></script>
     </body>
+=======
+
+        <div class="glass-card shadow-lg cursor-pointer" onclick="toggleDropdown('exp-MIT')">
+          <a href="https://www.ll.mit.edu/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/MITLL.jpg" alt="MIT LL Logo" class="company-logo"></a>
+          <div class="content-wrapper">
+            <h3 class="text-xl font-bold">Co-op Assistant - <a href="https://www.ll.mit.edu/" target="_blank" class="text-black hover:underline">MIT Lincoln Labs</a></h3>
+            <p class="text-gray-700 text-sm">Dec 2019 - June 2020</p>
+            <div id="exp-MIT" class="dropdown-content hidden mt-2 text-gray-600">
+              Collaborated across the organization to successfully develop and uphold systems through comprehensive analysis, engineering, manufacturing, calibrating, and testing.
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="certifications-projects" class="mt-12">
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="table-container">
+          <h2 class="section-header text-3xl font-semibold text-gray-900">Certifications</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Certification</th>
+                <th>Status</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3 px-4">N/A</td>
+                <td class="py-3 px-4">CISM</td>
+                <td class="py-3 px-4">Future Goal</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.isaca.org/credentialing/cism" class="text-blue-400 hover:underline" rel="noopener noreferrer">
+                         Info
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">N/A</td>
+                <td class="py-3 px-4">CISSP</td>
+                <td class="py-3 px-4">Future Goal</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.isc2.org/certifications/cissp" class="text-blue-400 hover:underline" rel="noopener noreferrer">
+                         Info
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">Google Cybersecurity Professional Certificate</td>
+                <td class="py-3 px-4">Completed</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.credly.com/badges/d04b5d9e-a206-4293-b5f0-26c1b59e423b" class="text-blue-400 hover:underline" rel="noopener noreferrer">
+                         Info
+                    </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">ISC2 Certified in Cybersecurity (CC)</td>
+                <td class="py-3 px-4">Completed</td>
+                <td class="py-3 px-4">
+                    <a href="https://www.credly.com/badges/bf94f333-0d93-41ac-aa21-9fa50539b76e" class="text-blue-400 hover:underline" rel="noopener noreferrer">
+                         Info
+                    </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-container">
+          <h2 class="section-header text-3xl font-semibold text-gray-900">Projects</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Project</th>
+                <th>Built with</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-3 px-4">2025</td>
+                <td class="py-3 px-4">Senior Capstone</td>
+                <td class="py-3 px-4">Tailwind, Laravel, AWS Lightsail</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('')" class="text-blue-400 hover:underline">
+                    View Details
+                </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">Kubernetes Pipeline & Observability</td>
+                <td class="py-3 px-4">Kubernetes, Minikube</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('Kubernetes Pipeline & Observability', 
+                  'This project focused on Kubernetes fundamentals using Minikube. The lab covered deploying and managing containerized applications, implementing CI/CD pipelines, and configuring observability tools like monitoring and logging. Key topics included Kubernetes deployments, services, scaling, and resilience strategies.')" 
+                  class="text-blue-400 hover:underline">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2024</td>
+                <td class="py-3 px-4">Release Engineering & Web Updates</td>
+                <td class="py-3 px-4">Ansible, Bash, HAProxy, Azure</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('Release Engineering & Web Updates', 
+                  'This project focused on implementing a blue/green deployment strategy for a load-balanced web application. Our team used Ansible and Bash scripts to automate rolling deployments and ensure zero downtime. Deliverables included a Visio architecture diagram and an automated release engineering process.')" 
+                  class="text-blue-400 hover:underline">
+                    View Details
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">Optimizing Police Resource Deployment Using Data Mining</td>
+                <td class="py-3 px-4">Python, Data Mining</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('Optimizing Police Resource Deployment', 'This project analyzes crime data using Python and data mining techniques to recommend strategic police deployments.')" class="text-blue-400 hover:underline">
+                    View Details
+                </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">Application Performance Monitoring</td>
+                <td class="py-3 px-4">Bash, C</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('Application Performance Monitoring', 'A project focused on monitoring application performance using Bash scripts and C programming for optimization.')" class="text-blue-400 hover:underline">
+                    View Details
+                </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">2023</td>
+                <td class="py-3 px-4">PHP & Database Modular Site</td>
+                <td class="py-3 px-4">PHP, MySQL, HTML, CSS</td>
+                <td class="py-3 px-4">
+                  <button onclick="showModal('PHP & Database Modular Site', 'Developed a modular PHP-based site with database connectivity using MySQL.')" class="text-blue-400 hover:underline">
+                    View Details
+                </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="mt-8">
+      <h2 class="text-3xl text-3xl font-semibold text-gray-900">Achievements</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dean's List Recognition -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">Dean’s List Recognition</h3>
+          <p class="text-gray-700 text-sm">Spring 2021, Spring 2023, Fall 2023, Fall 2024</p>
+          <p class="text-gray-600">Consistently recognized for <b>academic excellence</b>, maintaining a high GPA while balancing coursework, internships, and cybersecurity research.</p>
+        </div>
+
+        <!-- 2019 - SkillsUSA Silver Medal -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">SkillsUSA Regional Silver Medalist</h3>
+          <p class="text-gray-700 text-sm">May 2019</p>
+          <p class="text-gray-600">Secured <b>Silver Medal</b> in <b>Additive Manufacturing</b> at SkillsUSA, demonstrating advanced proficiency in 3D printing, CAD modeling, and technical problem-solving.</p>
+          <a href="https://www.watertownmanews.com/2018/03/15/minuteman-high-school-students-win-medals-at-skillsusa-competition/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+            Read Article <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+          </a>
+        </div>
+    
+        <!-- 2018 - SkillsUSA Gold Medal -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">SkillsUSA Regional Gold Medalist</h3>
+          <p class="text-gray-700 text-sm">April 2018</p>
+          <p class="text-gray-600">Achieved <b>Gold Medal</b> in <b>Additive Manufacturing</b> at the SkillsUSA competition, showcasing expertise in 3D printing techniques and precision engineering.</p>
+        </div>
+    
+        <!-- 2018 - The Beacon Feature -->
+        <div class="glass-card shadow-lg">
+          <h3 class="text-xl font-bold">Featured in The Beacon for Modern Manufacturing</h3>
+          <p class="text-gray-700 text-sm">November 2018</p>
+          <p class="text-gray-600"><b>Interviewed</b> mechanical engineer Rachael Ramos at Associated Environmental Systems in Acton, discussing innovations in modern manufacturing.</p>
+          <a href="https://www.wickedlocal.com/story/the-beacon/2018/11/16/minuteman-students-get-first-hand/64757097007/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+            Read Article <img src="/assets/images/icons8-arrow-up-24.png" alt="Up arrow" class="ml-2 w-4 h-4">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_breck.gif" alt="Trip Animation">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_mtFiju.jpg" alt="Trip 4">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_deer.jpg" alt="Trip 1">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_owl.jpg" alt="Trip 2">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_tower.jpg" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_kyoto.jpg" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_cats.png" alt="Trip 3">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_osaka.jpg" alt="Trip 4">
+        </div>
+        <div class="gallery-item">
+          <img src="/assets/images/Brandon_catneck.png" alt="Trip 4">
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-gray-700 mt-16 py-10 relative">
+      <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 xl:px-20">
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-300 mt-6 pt-6 text-center text-sm">
+          <p class="text-gray-600">
+            Built with <a href="https://tailwindcss.com/" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">Tailwind CSS</a>, designed in 
+            <a href="https://figma.com" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">Figma</a>, and developed in 
+            <a href="https://code.visualstudio.com/" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">VS Code</a>.  
+            Hosted on <a href="https://pages.github.com/" target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">GitHub Pages</a>.
+          </p>
+          <p class="mt-4 text-gray-600">&copy; <span id="year"></span> Brandon Bain. All rights reserved.</p>
+        </div>
+        
+    
+        <!-- Social Media Icons -->
+        <div class="absolute bottom-6 right-6 flex space-x-4">
+          <a href="https://www.linkedin.com/in/brandon-bain/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="w-8 h-8">
+          </a>
+          <a href="https://github.com/brandonbain" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-8 h-8">
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+    
+  </div>
+</body>
+>>>>>>> 055927bc65a631c5eac68f3d72542892676e908d
 </html>
